@@ -65,6 +65,7 @@ button::-moz-focus-inner {
 a, 
 a:visited {
 	text-decoration: none;
+	color: #fe0027;
 }
 
 a:hover {
@@ -92,37 +93,43 @@ h6 {
 
 /*--------------------*/
 
+/* Fonts */
+
+@font-face {
+	font-family: "DrawingBlood";
+	src: url("/fonts/drawing-blood/DrawingBlood.ttf") format("truetype"),
+		 url("/fonts/drawing-blood/DrawingBlood.woff2") format("woff2"),
+		 url("/fonts/drawing-blood/DrawingBlood.woff") format("woff");
+   }
+
 body {
 	height: 100%;
 	background-color: #000;
 	color: #fe0027;
-	font-family: crazy;
+	font-family: "DrawingBlood";
 	font-size: 18px;
 }
 
 h1 {
-	font-size: 24px;
-	color: #000;
+	font-size: 52px;
+	color: #fe0027;
+	padding: 2px;
 }
 
 .wrapper {
 	min-height: 100%;
+	height: 100vh;
 	display: flex;
 	flex-direction: column;
 }
 
 .container {
-	max-width: 1200px;
+	max-width: 1230px;
 	width: 100%;
 	margin: 0 auto;
 }
 
-/* Fonts */
 
-@font-face {
-	font-family: "crazy";
-	src: url("/fonts/drawing-blood/DrawingBlood.ttf") format("truetype");
-   }
 
 /* Header */
 .header {
@@ -136,17 +143,17 @@ h1 {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	padding: 5px 15px 5px 15px;
 }
 
 .logo__placeholder {
 	width: 130px;
-	padding: 5px;
+	height: 60px;
 }
 
 .logo__placeholder img,
 .btn img {
 	width: 100%;
-	height: auto;
 	object-fit: contain;
 }
 
@@ -160,16 +167,34 @@ h1 {
 .btn:hover {
 	outline: 1px solid #fe0027;
 	border-radius: 2px;
+	transition: outline .2s linear;
 }
 
 /* main */
 .main {
 	flex: 1 1 auto;
-	background: url(../img/bg.png) center / cover no-repeat;
+	position: relative;
+	background: url(../img/bg.gif) center / cover no-repeat;
+	background-color: #000;
+	overflow: hidden;
 }
 
 .main__content {
 	height: 100%;
+	position: absolute;
+	margin: 0 auto;
+	top: 10%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, 0%);
+}
+
+.main__content img {
+	width: 100%;
+	height: 100%;
+	max-width: 500px;
+	max-height: 540px;
+	margin-bottom: 30px;
 }
 
 /* footer */
