@@ -154,14 +154,27 @@ h1 {
 /* button */
 .btn {
 	width: 40px;
+	height: 40px;
 	background-color: #000;
+	z-index: 1;
 }
 
-.btn:active,
 .btn:hover {
 	outline: 1px solid #fe0027;
 	border-radius: 2px;
-	transition: outline .2s linear;
+}
+
+input[type=checkbox] {
+	display: none;
+}
+
+.btn label {
+	cursor: pointer;
+	transition: .2s linear;
+}
+
+.nav {
+	display: none;
 }
 
 /* main */
