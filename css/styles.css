@@ -93,27 +93,19 @@ h6 {
 
 /*--------------------*/
 
-/* Fonts */
-
-@font-face {
-	font-family: "DrawingBlood";
-	src: url("/fonts/drawing-blood/DrawingBlood.ttf") format("truetype"),
-		 url("/fonts/drawing-blood/DrawingBlood.woff2") format("woff2"),
-		 url("/fonts/drawing-blood/DrawingBlood.woff") format("woff");
-   }
-
 body {
 	height: 100%;
 	background-color: #000;
 	color: #fe0027;
-	font-family: "DrawingBlood";
+	font-family: 'Inconsolata', monospace;
 	font-size: 18px;
 }
 
 h1 {
+	font-family: 'Lacquer', cursive;
 	font-size: 52px;
 	color: #fe0027;
-	padding: 2px;
+	padding-top: 30px;
 }
 
 .wrapper {
@@ -126,10 +118,9 @@ h1 {
 .container {
 	max-width: 1230px;
 	width: 100%;
+	height: 100%;
 	margin: 0 auto;
 }
-
-
 
 /* Header */
 .header {
@@ -151,10 +142,13 @@ h1 {
 	height: 60px;
 }
 
+.logo__placeholder a {
+	display: block;
+}
+
 .logo__placeholder img,
 .btn img {
 	width: 100%;
-	object-fit: contain;
 }
 
 /* button */
@@ -173,20 +167,17 @@ h1 {
 /* main */
 .main {
 	flex: 1 1 auto;
-	position: relative;
 	background: url(../img/bg.gif) center / cover no-repeat;
 	background-color: #000;
-	overflow: hidden;
 }
 
 .main__content {
-	height: 100%;
-	position: absolute;
 	margin: 0 auto;
-	top: 10%;
-	left: 50%;
-	margin-right: -50%;
-	transform: translate(-50%, 0%);
+	padding-top: 50px;
+	text-align: center;
+    max-width: 500px;
+    width: 100%;
+	height: 100%;
 }
 
 .main__content img {
@@ -201,10 +192,7 @@ h1 {
 
 .footer {
 	height: 75px;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	text-align: center;
 }
 
 .copy {
@@ -212,4 +200,11 @@ h1 {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+	max-height: 75px;
+	height: 100%;
+
+}
+
+.copy a:hover {
+	text-decoration: underline;
 }
