@@ -103,7 +103,7 @@ body {
 
 h1 {
 	font-family: 'Lacquer', cursive;
-	font-size: 52px;
+	font-size: 50px;
 	color: #fe0027;
 	padding-top: 30px;
 }
@@ -147,7 +147,7 @@ h1 {
 }
 
 .logo__placeholder img,
-.btn img {
+.toggle__img {
 	width: 100%;
 }
 
@@ -156,7 +156,6 @@ h1 {
 	width: 40px;
 	height: 40px;
 	background-color: #000;
-	z-index: 1;
 }
 
 .btn:hover {
@@ -174,7 +173,94 @@ input[type=checkbox] {
 }
 
 .nav {
-	display: none;
+    text-align: center;
+	width: 300px;
+	height: 370px;
+	background-color: #000;
+	position: relative;
+	top: 25px;
+	right: 130px;
+	border: 1px solid #fe0027;
+	border-radius: 5px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.nav__list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.nav__item {
+	width: 33.333%;
+	padding: 5px;
+	margin-top: 16px;
+}
+
+.nav__link {
+	display: block;
+	padding-bottom: 3px;
+}
+
+.nav__text {
+	display: block;
+	font-size: 15px;
+	padding-top: 5px;
+}
+
+.nav__link:hover {
+	outline: 1px solid #fe0026a4;
+	text-decoration: underline;
+}
+
+.nav__link:active {
+	outline: 2px solid #fe0027;
+}
+
+.nav__link:hover,
+.nav__link:active {
+	border-radius: 5px;
+}
+
+.nav__image {
+	width: 100%;
+    max-width: 32px;
+	padding: 2px;
+}
+
+.toggle:not(:checked) ~ .nav,
+.new__toggle:not(:checked) ~ .new__list {
+  	display: none;
+}
+
+.nav::-webkit-scrollbar {
+  	width: 10px;
+}
+
+.nav::-webkit-scrollbar-thumb {
+	border: 1px solid #fe0027;
+	border-radius: 50px;
+}
+
+.new__label {
+	height: 44px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.new__label:hover,
+.new__link:hover {
+	background-color: #fe0027;
+	color: #000;
+	transition: .2s linear;
+}
+
+.new__link {
+	display: block;
+	width: 100%;
+	text-align: center;
+	padding: 5px 0;
 }
 
 /* main */
@@ -182,6 +268,7 @@ input[type=checkbox] {
 	flex: 1 1 auto;
 	background: url(../img/bg.gif) center / cover no-repeat;
 	background-color: #000;
+	z-index: -1;
 }
 
 .main__content {
@@ -195,9 +282,6 @@ input[type=checkbox] {
 
 .main__content img {
 	width: 100%;
-	height: 100%;
-	max-width: 500px;
-	max-height: 540px;
 	margin-bottom: 30px;
 }
 
