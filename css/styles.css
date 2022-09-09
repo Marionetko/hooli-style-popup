@@ -1,5 +1,3 @@
-/* CSS reset*/
-
 *{
 	padding: 0;
 	margin: 0;
@@ -85,9 +83,6 @@ h6 {
 	font-weight: 400;
 }
 
-
-/*--------------------*/
-
 body {
 	height: 100%;
 	background-color: #000;
@@ -117,7 +112,6 @@ h1 {
 	margin: 0 auto;
 }
 
-/* Header */
 .header {
 	width: 100%;
 	height: 75px;
@@ -145,8 +139,6 @@ h1 {
 .toggle__img {
 	width: 100%;
 }
-
-/* navigation */
 
 .btn {
 	width: 40px;
@@ -286,7 +278,6 @@ input[type=checkbox]:active {
 	padding: 5px 0;
 }
 
-/* main */
 .main {
 	flex: 1 1 auto;
 	background: url(../img/bg.gif) center / cover no-repeat;
@@ -307,8 +298,6 @@ input[type=checkbox]:active {
 	width: 100%;
 	margin-bottom: 30px;
 }
-
-/* footer */
 
 .footer {
 	height: 75px;
